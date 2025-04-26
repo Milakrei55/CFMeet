@@ -39,7 +39,7 @@ const EventGenresChart = ({ events }) => {
       <text
         x={x}
         y={y}
-        fill="#FFFFFF" // White text
+        fill="#FFFFFF" // White text on piechart
         textAnchor={x > cx ? "start" : "end"}
         dominantBaseline="central"
         fontSize={12}
@@ -59,18 +59,21 @@ const EventGenresChart = ({ events }) => {
           labelLine={false}
           label={renderCustomizedLabel}
           cx="50%"
-          cy="45%" // slight tweak to center chart better
+          cy="55%"
         >
           {data.map((entry, index) => (
             <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />
           ))}
         </Pie>
         <Legend
-          layout="horizontal"
-          verticalAlign="bottom"
-          align="center"
+          layout="vertical"
+          verticalAlign="middle"
+          align="right"
           iconType="circle"
-          wrapperStyle={{ marginTop: "20px" }}
+          wrapperStyle={{
+            paddingLeft: "10px",
+            lineHeight: "24px", // legend spacing
+          }}
         />
       </PieChart>
     </ResponsiveContainer>
