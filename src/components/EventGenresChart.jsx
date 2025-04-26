@@ -11,7 +11,7 @@ const EventGenresChart = ({ events }) => {
   }, [`${events}`]);
 
   const getData = () => {
-    const data = genres.map((genre) => {
+    return genres.map((genre) => {
       const filteredEvents = events.filter((event) =>
         event.summary.includes(genre)
       );
@@ -20,7 +20,6 @@ const EventGenresChart = ({ events }) => {
         value: filteredEvents.length,
       };
     });
-    return data;
   };
 
   const renderCustomizedLabel = ({
@@ -40,7 +39,7 @@ const EventGenresChart = ({ events }) => {
       <text
         x={x}
         y={y}
-        fill="#333"
+        fill="#FFFFFF" // White text
         textAnchor={x > cx ? "start" : "end"}
         dominantBaseline="central"
         fontSize={12}
@@ -60,13 +59,19 @@ const EventGenresChart = ({ events }) => {
           labelLine={false}
           label={renderCustomizedLabel}
           cx="50%"
-          cy="50%"
+          cy="45%" // slight tweak to center chart better
         >
           {data.map((entry, index) => (
             <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />
           ))}
         </Pie>
-        <Legend verticalAlign="bottom" align="center" />
+        <Legend
+          layout="horizontal"
+          verticalAlign="bottom"
+          align="center"
+          iconType="circle"
+          wrapperStyle={{ marginTop: "20px" }}
+        />
       </PieChart>
     </ResponsiveContainer>
   );
