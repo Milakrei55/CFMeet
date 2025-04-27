@@ -4,7 +4,7 @@ const NumberOfEvents = ({ setCurrentNOE, setErrorAlert }) => {
   const [eventNumber, setEventNumber] = useState(32);
 
   const handleInputChange = (event) => {
-    const value = Number(event.target.value); // Convert input to number
+    const value = Number(event.target.value); 
     setEventNumber(value);
 
     let infoText;
@@ -24,7 +24,7 @@ const NumberOfEvents = ({ setCurrentNOE, setErrorAlert }) => {
       <label htmlFor="events-num">Number of Events:</label>
       <input
         type="number"
-        id="events-num"  // 👈 Make sure this matches htmlFor in <label>
+        id="events-num" 
         className="events-num"
         role="textbox"
         value={eventNumber}

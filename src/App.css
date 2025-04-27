@@ -227,16 +227,3 @@ input[type="number"] {
 .recharts-cartesian-axis-tick text {
   fill: #ffffff !important;
 }
-
-/* Dots on grid - magenta color */
-.recharts-dot {
-  fill: #f72585 !important;
-}
-
-/* Event list text color - change hover color to cyan (light blue) */
-#event-list .event:hover p,
-#event-list .event:hover .eventTitle,
-#event-list .event:hover .detailsInformation,
-#event-list .event:hover .eventDescription {
-  color: #4cc9f0 !important;
-}
