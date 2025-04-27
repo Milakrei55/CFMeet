@@ -1,8 +1,9 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:500);
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap');
 
 .App {
   text-align: center;
   padding: 2% 5%;
+  font-family: 'Open Sans', sans-serif;
 }
 
 #root {
@@ -30,20 +31,18 @@ input[type="number"] {
   padding: 8px 6px 8px 10px;
   border-radius: 4px;
   outline: none;
-  border: 1px solid #ccc;
+  border: none;
+  background-color: #4361ee;
+  color: #ffffff;
   font-size: 14px;
   line-height: 20px;
-  align-self: center;
   height: 38px;
   margin-bottom: 20px;
 }
 
 /* City Search Component */
-
 .city {
   width: 250px;
-  text-align: center;
-  align-items: center;
 }
 
 #city-search {
@@ -51,35 +50,27 @@ input[type="number"] {
   flex-direction: column;
   margin: auto;
   position: relative;
-
 }
 
 .suggestions {
   display: flex;
   flex-direction: column;
   position: absolute;
-  color: black;
+  color: #ffffff;
   top: 45px;
   z-index: 2;
   margin: 0;
   font-size: 14px;
   width: 250px;
-  /* Ensure width is defined */
-  align-items: center;
-  /* Centers list items horizontally */
-  justify-content: center;
-  /* Ensures vertical center alignment if necessary */
+  background-color: #7209b7;
 }
 
 .suggestions>li {
   text-align: left;
   padding: 8px 6px 8px 10px;
-  background-color: #eee;
   cursor: pointer;
   width: 100%;
-  /* This ensures that li elements take the full width of the container */
 }
-
 
 .suggestions>li:last-child {
   border-bottom-left-radius: 4px;
@@ -87,7 +78,7 @@ input[type="number"] {
 }
 
 .suggestions>li:hover {
-  background-color: #bcdcdb;
+  background-color: #f72585;
 }
 
 .alerts-container {
@@ -99,44 +90,34 @@ input[type="number"] {
 }
 
 /* Number of Events Component */
-
 #number-of-events {
   display: flex;
   flex-direction: column;
   margin: auto;
   position: relative;
   width: 250px;
-  /* Adjust width as necessary */
 }
 
 #number-of-events label {
   font-size: 16px;
   margin-bottom: 8px;
-  /* Space between label and input */
+  color: #ffffff;
 }
 
 .events-num {
   padding: 8px 10px;
   border-radius: 4px;
   outline: none;
-  border: 1px solid #ccc;
+  border: none;
+  background-color: #4361ee;
+  color: #ffffff;
   font-size: 14px;
   line-height: 20px;
   width: 100%;
-  /* Makes input fill the container */
   margin-bottom: 20px;
-  /* Adds space below the input */
 }
-
-.events-num:focus {
-  border-color: #3b8bfc;
-  /* Optional: Add focus effect */
-}
-
-/*  */
 
 /* Charts Component */
-
 .charts-container {
   width: 99%;
   height: 400;
@@ -150,96 +131,49 @@ input[type="number"] {
   }
 }
 
-/*  */
-
 /* Event-List Component */
-
 #event-list {
-  list-style: none;
-  /* Removes default list styling */
   padding: 0;
-  /* Removes default padding */
-  margin: 0;
-  /* Removes default margin */
-  display: flex;
-  /* Makes the container a flexbox */
-  flex-direction: column;
-  /* Stack events vertically */
-  gap: 10px;
-  /* Space between each event */
-  max-width: 800px;
-  /* Optional: Adjust max width */
   margin: 20px auto;
-  /* Centers the list horizontally */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 800px;
 }
 
 #event-list .event {
   padding: 15px;
-  background-color: #050000;
-  border: 1px solid #ccc;
+  background-color: #7209b7;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease-in-out;
-}
-
-#event-list .event:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  /* Add a hover effect */
-}
-
-#event-list .event p {
-  margin: 5px 0;
-  /* Space out event details */
-  color: #333;
-}
-
-.event {
-  padding: 15px;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* Centers all child elements horizontally */
   text-align: center;
-  /* Ensures text inside is centered */
 }
 
-.event:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+#event-list .event:hover {
+  background-color: #f72585;
+}
+
+#event-list .event p {
+  margin: 5px 0;
+  color: #ffffff;
 }
 
 .eventTitle {
   font-size: 18px;
   font-weight: bold;
-  color: #ffffff;
+  color: #4cc9f0;
   margin-bottom: 5px;
 }
 
 .eventCreated,
 .eventLocation {
   font-size: 14px;
-  color: #b1b1b1;
+  color: #ffffff;
   margin-bottom: 5px;
-}
-
-button {
-  padding: 8px 12px;
-  background-color: #3b8bfc;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 14px;
-  margin-bottom: 10px;
-}
-
-button:hover {
-  background-color: #2b73d3;
 }
 
 .detailsInformation {
@@ -249,9 +183,7 @@ button:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* Centers all child elements horizontally */
   text-align: center;
-  /* Ensures text inside is centered */
 }
 
 .detailsInformation div {
@@ -260,12 +192,12 @@ button:hover {
 
 .detailsInformation .eventDescription {
   font-size: 13px;
-  color: #b4b4b4;
+  color: #4cc9f0;
   margin-top: 10px;
 }
 
 .detailsInformation a {
-  color: #3b8bfc;
+  color: #4cc9f0;
   text-decoration: none;
   font-size: 14px;
 }
