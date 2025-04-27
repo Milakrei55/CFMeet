@@ -161,7 +161,7 @@ input[type="number"] {
 #event-list .event {
   padding: 15px;
   background-color: #7209b7;
-  border-radius: 16px;
+  border-radius: 32px;
   transition: background-color 0.3s ease-in-out;
   position: relative;
   display: flex;
