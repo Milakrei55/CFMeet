@@ -93,3 +93,45 @@ _As a user, I should be able to view charts showing event distribution by city a
 - **Styling:** Responsive design for all major screen sizes  
 
 ---
+
+## 📚 Documentation
+
+- Inline comments and unit tests reflect a Test-Driven Development (TDD) approach
+- Project includes user stories and acceptance criteria
+- Data visualizations powered by Recharts
+- Deployed as a Progressive Web App with installable features
+
+---
+
+## 🌐 Hosting
+
+This project is deployed using **GitHub Pages**. It can be accessed via any modern browser with support for PWA features and offline capabilities.
+
+---
+
+## 🏁 Getting Started
+
+To run this app locally:
+
+1. Clone the repo  
+   `git clone https://github.com/Milakrei55/CFMeet.git`
+2. Navigate to the project folder  
+   `cd CFMeet`
+3. Install dependencies  
+   `npm install`
+4. Start the app  
+   `npm start`
+
+Visit `http://localhost:3000/` to use the app locally.
+
+---
+
+## ✍️ Author
+
+Developed by Michaela (Milakrei55) as part of the Full-Stack Immersion Achievement 4.
+
+---
+
+## 🛑 Hard Rules
+
+- Project is for educational and portfolio use only
